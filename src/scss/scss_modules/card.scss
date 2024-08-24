@@ -1,0 +1,150 @@
+@import './scss_modules/fonts.scss';
+@import './scss_modules/normalize.scss';
+@import './scss_modules/vars.scss';
+
+.cardContent {
+    position: relative;
+}
+
+.card {
+    position: sticky;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: grid;
+    padding: 20px 10px 10px;
+    border: 2px solid transparent;
+    background: linear-gradient($mainColor, $mainColor ) padding-box,
+    linear-gradient(to right ,#CF2D1B , #E5F901) border-box;
+    border-radius: 22px;
+    &__titles {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: baskervville;
+        align-items: center;
+        padding: 0 0 20px 0;
+    }
+
+    &__names {
+        font-size: 22px;
+    }
+    &__names-text1 {
+        color: $mainRed;
+    }
+    &__names-text2 {
+        color: $secondText;
+    }
+    &__role {
+        font-size: 18px;
+        font-weight: 400;
+        &_m {
+            font-weight: 300px;
+        }
+    }
+    &__whatsapp-icon {
+        width: 25px;
+        height: 25px;
+    }
+    &__img-wrapper {
+        overflow: hidden;
+        display: flex;
+        border-radius: 22px;
+        height: 200px;
+    }
+    &__img {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__github {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        border-radius: 50%;
+        & img {
+            display: flex;
+            object-fit: cover;
+        }
+    }
+    &__linkedin {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        border-radius: 50%;
+        & img {
+            display: flex;
+            object-fit: cover;
+        }
+    }
+    &__email {
+        padding: 10px 0;
+        justify-self: center;
+
+    }
+    &__whatsapp {
+        justify-self: center;
+        display: flex;
+        gap: 10px;
+        margin: 15px 0;
+        border-bottom: 1px solid $secondText;
+        border-top: 1px solid $secondText;
+        padding: 5px 0;
+        align-items: center;
+        & img {
+            width: 30px;
+        }
+    }
+    &__based {
+        font-size: 14px;
+        display: flex;
+        margin-bottom: 10px;
+        justify-self: center;
+        text-align: center;
+    }
+    &__social {
+        display: flex;
+        gap: 30px;
+        justify-self: center;
+        margin-bottom: 10px;
+        padding: 10px 0;
+    }
+    &__social-iconWrapper {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .card {
+        &__img-wrapper {
+            height: 120px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .card {
+         transform: translateY(0);
+         width: 450px;
+        &__img-wrapper {
+            height:220px;
+        }
+    }
+}
+@media(max-width: 576px) {
+    .card {
+        transform: translateY(0);
+        width: 300px;
+   }
+}
+@media (max-width: 410px) {
+    .card {
+         width: 280px;
+         position:static;
+        &__img-wrapper {
+            height:160px;
+        }
+    }
+}

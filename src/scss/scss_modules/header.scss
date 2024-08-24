@@ -1,0 +1,155 @@
+@import './vars.scss';
+@import './normalize.scss';
+
+body {
+    background-color: $mainColor;
+
+}
+.body-lock {
+    overflow: hidden;
+}
+.myWebsite {
+    padding: 0 100px;
+    color: $mainText;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    font-family: ibm;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: $mainColor;
+    z-index: 99;
+    font-family: baskervville;
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 150px;
+    }
+}
+.header__logo {
+    font-size: 38px;
+    color: $mainText;
+    min-width: 262px;
+    & span {
+        color: #E5F901;
+    }
+}
+.menu__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.menu__link {
+    padding: 7px 25px;
+    text-transform: capitalize;
+    border: 2px solid transparent;
+    background: linear-gradient($mainColor, $mainColor ) padding-box,
+    linear-gradient(to right ,#CF2D1B , #E5F901) border-box;
+    border-radius: 22px ;
+    transition: 0.3s ease;
+    &:hover {
+        color: #E5F901;
+        border: 2px solid #CF2D1B;
+
+    }
+}
+
+
+.burger {
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: none;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $mainText;
+        transition: 0.3s ease;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $mainText;
+        transition: 0.3s ease;
+
+    }
+    &__decor {
+        transition: 0.3s ease;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        background-color: $mainText;
+    }
+    &-open {
+        &::before {
+            transform: rotate(-45deg);
+            top: 50%;
+        }
+        &::after {
+            transform: rotate(45deg);
+            top: 50%;
+        }
+        & span {
+            width: 0;
+        }
+    }
+}
+
+@media(max-width: 1280px) {
+    .myWebsite {
+        padding: 0 50px;
+    }
+}
+@media(max-width: 992px) {
+    .myWebsite {
+        padding: 0 15px;
+    }
+    .burger {
+        display: block;
+    }
+    .menu__list {
+        transition: all 0.4s ease;
+        min-height: 100vh;
+        padding: 50px;
+        background-color: $mainColor;
+        position: absolute;
+        top: 100%;
+        left: -300%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+        opacity: 0;
+    }
+    .menu-open {
+        left: 0;
+        opacity: 1100%;
+
+    }
+}
+@media(max-width: 568px) {
+    .header__logo {
+        font-size: 28px;
+    }
+    .menu__list {
+        padding: 50px 0;
+    }
+}

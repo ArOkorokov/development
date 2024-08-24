@@ -1,0 +1,27 @@
+{
+  "name": "file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.9.1",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "sass": "^1.70.0",
+    "style-loader": "^3.3.4",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "swiper": "^11.0.5"
+  }
+}
