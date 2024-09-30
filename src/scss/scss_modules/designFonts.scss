@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "imbsans";
+    src:
+      local("imbsans"),
+      url("../fonts/IBMPlexSans-Regular.ttf") format("opentype") tech(color-COLRv1);
+      font-weight: 400;
+}
+@font-face {
+    font-family: "imbsans";
+    src:
+      local("imbsans"),
+      url("../fonts/IBMPlexSans-Medium.ttf") format("opentype") tech(color-COLRv1);
+      font-weight: 500;
+}
+
+@font-face {
+    font-family: "cabin";
+    src:
+      local("cabin"),
+      url("../fonts/CabinM.ttf") format("opentype") tech(color-COLRv1);
+      font-weight: 500;
+}
+@font-face {
+    font-family: "cabin";
+    src:
+      local("cabin"),
+      url("../fonts/CabinR.ttf") format("opentype") tech(color-COLRv1);
+      font-weight: 400;
+}

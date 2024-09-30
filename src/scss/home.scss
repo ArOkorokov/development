@@ -3,6 +3,7 @@
 @import './scss_modules/header.scss';
 @import './scss_modules/vars.scss';
 @import './scss_modules/card.scss';
+@import '../../node_modules/video.js/dist/video-js.min.css';
 
 @import './scss_modules/footer.scss';
 
@@ -868,3 +869,5 @@
         }
     }
 }
+
+

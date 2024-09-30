@@ -1,18 +1,14 @@
 const config = {
-    mode: 'production',
+    mode: "development",
+    watchOptions: {
+        aggregateTimeout: 200,
+        poll: 1000,
+      },
     entry: {
         index: './src/js/index.js',
     },
     output: {
         filename: '[name].bundle.js',
-    },
-    module: {
-        rules: [
-            {
-                test:/\.css$/,
-                use: ['stle-loader', 'css-loader'],
-            },
-        ],
     },
 };
 
